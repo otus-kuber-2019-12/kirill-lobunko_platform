@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
   name: frontend
   labels:
@@ -17,6 +17,14 @@ spec:
       containers:
       - name: server
         image: klobunko/hipster-frontend:v0.0.2
+        readinessProbe:
+          initialDelaySeconds: 10
+          httpGet:
+            path: "/_healthz"
+            port: 8080
+            httpHeaders:
+            - name: "Cookie"
+              value: "shop_session-id=x-readiness-probe"
         env:
             - name: PORT
               value: "8080"
