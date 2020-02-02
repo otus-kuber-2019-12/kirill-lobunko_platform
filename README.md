@@ -1,6 +1,8 @@
 # kirill-lobunko_platform
 kirill-lobunko Platform repository
 
+kubernetes-operators
+
 Лекция 8 kubernetes-operator
 
 Вывод комманд:
