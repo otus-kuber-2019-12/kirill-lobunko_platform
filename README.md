@@ -1,20 +1,22 @@
 # kirill-lobunko_platform
 kirill-lobunko Platform repository
-## Вопрос:
 
-## Ответ:
+kubernetes-operators
 
- Выполнено ДЗ №5
+Лекция 8 kubernetes-operator
 
- - [*] Основное ДЗ
- - [ ] Задание со *
+Вывод комманд:
 
-## В процессе сделано:
- - Изучал kubernetes volumes
+➜  kubernetes-operators git:(kubernetes-operators) ✗ kubectl get jobs
+NAME                         COMPLETIONS   DURATION   AGE
+backup-mysql-instance-job    1/1           1s         2m23s
+restore-mysql-instance-job   1/1           42s        91s
 
-## Как запустить проект:
-
-## Как проверить работоспособность:
-
-## PR checklist:
- - [ ] Выставлен label с номером домашнего задания
+➜  kubernetes-operators git:(kubernetes-operators) ✗ sh view.sh
+mysql: [Warning] Using a password on the command line interface can be insecure.
++----+-------------+
+| id | name        |
++----+-------------+
+|  1 | some data   |
+|  2 | some data-2 |
++----+-------------+
